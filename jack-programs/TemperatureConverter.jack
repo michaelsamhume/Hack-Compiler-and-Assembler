@@ -1,0 +1,46 @@
+class TemperatureConverter {
+    
+    function int fahrenheitCelsius(int fahrenheit) {
+        //Converts Fahrenheit to Celsius
+        var int celsius;
+        let celsius = ((fahrenheit - 32) * 5) / 9; 
+        return celsius;
+    }
+
+    function int celsiusFahrenheit(int celsius) {
+        //Converts Celsius to Fahrenheit
+        var int fahrenheit;
+        let fahrenheit = ((celsius * 9) / 5) + 32;
+        return fahrenheit;
+    }
+
+    function void main() {
+        var int conversion, cTemp, fTemp, converted;
+        var String tempInput;
+
+        //Get the user input for the mode, then based on that we get their input for the temperature.
+        do Output.printString("Choose 1 to convert Celsius to Fahrenheit, or 2 for Fahrenheit to Celsius: ");
+        do Output.printChar(10);
+        let conversion = Keyboard.readChar() - 48;  // Subtracting 48 from the ASCII value will give us the correct value
+
+        let tempInput = String.new(3); //This is gonna be used to store the actual temperature. It will be converted to an int  
+
+        if (conversion = 1) {
+            do Output.printString("Enter Celsius temperature: ");
+            let cTemp = Keyboard.readInt(tempInput);    // The input from the user is stored and converted to an integer
+            let converted = TemperatureConverter.celsiusFahrenheit(cTemp);
+            do Output.printString("The equivalent temperature in Fahrenheit is: ");
+            do Output.printInt(converted);
+        } else {
+            if (conversion = 2) {
+                do Output.printString("Enter Fahrenheit temperature: ");
+                let fTemp = Keyboard.readInt(tempInput); 
+                let converted = TemperatureConverter.fahrenheitCelsius(fTemp);
+                do Output.printString("The equivalent temperature in Celsius is: ");
+                do Output.printInt(converted);
+            }
+        }
+
+        return;
+    }
+}

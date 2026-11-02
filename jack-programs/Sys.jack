@@ -1,0 +1,6 @@
+class Sys {
+    function void init() {
+        do TemperatureConverter.main();
+        return;
+    }
+}
