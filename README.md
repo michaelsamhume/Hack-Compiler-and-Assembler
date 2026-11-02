@@ -1,4 +1,4 @@
-# Nand2Tetris Computer Systems — CS 210
+# Computer Systems Programming — CS 210
 
 A collection of computer systems coursework exploring the Hack platform, from assembly language and an assembler through VM translation and Jack compilation. The archive covers projects 4 and 6–11.
 
