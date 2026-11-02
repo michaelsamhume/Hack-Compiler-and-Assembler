@@ -1,0 +1,15 @@
+push constant 2
+call Memory.alloc 1
+pop pointer 0
+push this 0
+pop this 0
+push this 1
+pop this 1
+push this 0
+return
+push this 0
+push constant 0
+return
+push local 0
+pop local 1
+label WHILE_EXP0
